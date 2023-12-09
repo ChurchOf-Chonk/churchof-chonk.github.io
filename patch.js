@@ -21,3 +21,4 @@ function patchNotes(repo) {
 
 patchNotes("churchof-chonk.github.io");
 patchNotes("chonkbible");
+patchNotes("mantra");
