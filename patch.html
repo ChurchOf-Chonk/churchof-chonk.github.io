@@ -13,21 +13,65 @@
             width: 100%;
         }
     </style>
+
+<style>
+    .dots {
+        font-size: 7.5rem;
+
+        animation: dots 5s ease both;
+
+        transform-origin: center;
+
+        margin-top: 0rem;
+    }
+
+    @keyframes dots {
+        0% {
+            rotate: 720deg;
+
+            margin-top: 10rem;
+
+            text-shadow: white 0px 0px 150px;
+
+            opacity: 0;
+        }
+
+        100% {
+            rotate: 0deg;
+
+            margin-top: 0rem;
+
+            text-shadow: white 0px 0px 35px;
+
+            opacity: 1;
+        }
+    }
+
+    @keyframes dots-final {
+        0% {
+            text-shadow: white 0px 0px 35px;
+        }
+
+        100% {
+            text-shadow: white 0px 0px 10px;
+        }
+    }
+</style>
 </head>
-<body>
+<body style="overflow: hidden; pointer-events: none;">
     <div class="navbar-column">
-        <div class="navbar">
+        <div class="navbar" id="navbar" style="opacity: 0; transform: translateY(-10rem); transition: 2.5s ease; backdrop-filter: none; -webkit-backdrop-filter: none; width: calc(100% - 1rem);">
             <h1>Chonk</h1>
         </div>
 
-        <button onclick="location.href = 'index.html'">
+        <button id="back-button" onclick="exitToHome()" style="opacity: 0; transform: translateX(-10rem); transition: 2.5s ease;">
             <span class="material-symbols-rounded">arrow_back</span>
             Back
         </button>
     </div>
 
-    <div class="column">
-        <div id="churchof-chonk.github.io-about-card" class="column-flat" style="opacity: 0; pointer-events: none;">
+    <div class="column" id="column" style="margin-right: 1rem;">
+        <div id="churchof-chonk.github.io-about-card" class="column-flat" style="opacity: 0; pointer-events: none; transform: translateY(5rem); transition: 2.5s ease;">
             <div class="card-flat-bottom text-center">
                 <h1>Chonk Hub</h1>
             </div>
@@ -38,7 +82,7 @@
             </div>
         </div>
 
-        <div id="chonkbible-about-card" class="column-flat" style="opacity: 0; pointer-events: none;">
+        <div id="chonkbible-about-card" class="column-flat" style="opacity: 0; pointer-events: none; transform: translateY(5rem); transition: 2.5s ease;">
             <div class="card-flat-bottom text-center">
                 <h1>Bible</h1>
             </div>
@@ -49,7 +93,7 @@
             </div>
         </div>
 
-        <div id="mantra-about-card" class="column-flat" style="opacity: 0; pointer-events: none;">
+        <div id="mantra-about-card" class="column-flat" style="opacity: 0; pointer-events: none; transform: translateY(5rem); transition: 2.5s ease;">
             <div class="card-flat-bottom text-center">
                 <h1>Mantras</h1>
             </div>
@@ -59,6 +103,10 @@
                 <p id="mantra-whats-new"></p>
             </div>
         </div>
+    </div>
+
+    <div class="absolute-centre">
+        <h1 id="dots" class="dots">∴</h1>
     </div>
 
     <script src="patch.js"></script>
