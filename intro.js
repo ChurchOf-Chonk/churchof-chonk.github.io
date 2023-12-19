@@ -69,3 +69,30 @@ function exitToPatch() {
         location.href = 'patch.html'; 
     }, 5000);
 }
+
+function exitToOtherSite(url) {
+    document.getElementById("navbar").style.transition = "2.5s ease";
+    document.getElementById("patch-button").style.transition = "2.5s ease";
+
+    document.body.style.overflow = "hidden";
+
+
+
+    document.getElementById("navbar").style.opacity = "0";
+    document.getElementById("navbar").style.transform = "translateY(-10rem)";
+
+    document.getElementById("patch-button").style.opacity = "0";
+    document.getElementById("patch-button").style.transform = "translateX(-10rem)";
+
+    document.getElementById("mantra-card").style.opacity = "0";
+    document.getElementById("mantra-card").style.transform = "translateY(5rem)";
+
+    document.getElementById("bible-card").style.opacity = "0";
+    document.getElementById("bible-card").style.transform = "translateY(5rem)";
+
+    setTimeout(() => {
+        window.open(url, '_blank');
+
+        showUI();
+    }, 2500);
+}
