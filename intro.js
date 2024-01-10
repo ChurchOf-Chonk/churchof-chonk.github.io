@@ -31,6 +31,11 @@ function showUI() {
         }, 500);
 
         setTimeout(() => {
+          document.getElementById("oracle-card").style.opacity = "1";
+          document.getElementById("oracle-card").style.transform = "translateY(0)";
+      }, 1000);
+
+        setTimeout(() => {
             document.getElementById("patch-button").style.transition = "0.25s ease";
 
             document.body.style.pointerEvents = "all";

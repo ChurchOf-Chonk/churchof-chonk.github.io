@@ -21,6 +21,7 @@ function patchNotes(repo) {
 patchNotes("churchof-chonk.github.io");
 patchNotes("chonkbible");
 patchNotes("mantra");
+patchNotes("oracle");
 
 /// Intro
 document.getElementById("dots").style.animation = "dots 5s ease reverse both";
@@ -46,6 +47,11 @@ setTimeout(() => {
     }, 1000);
 
     setTimeout(() => {
+      document.getElementById("oracle-about-card").style.opacity = "1";
+      document.getElementById("oracle-about-card").style.transform = "translateY(0rem)";
+  }, 1500);
+
+    setTimeout(() => {
         document.getElementById("churchof-chonk.github.io-about-card").style.transition = "0.25s ease";
 
         document.getElementById("back-button").style.transition = "0.25s ease";
@@ -67,6 +73,18 @@ setTimeout(() => {
 
         document.body.style.overflow = "initial";
     }, 3500);
+
+    setTimeout(() => {
+      document.getElementById("oracle-about-card").style.transition = "0.25s ease";
+
+      document.getElementById("navbar").style.transition = "none";
+      document.getElementById("navbar").style.width = "100%";
+
+      document.getElementById("column").style.transition = "none";
+      document.getElementById("column").style.marginRight = "0";
+
+      document.body.style.overflow = "initial";
+  }, 4000);
 }, 5000);
 
 function exitToHome() {
@@ -95,6 +113,9 @@ function exitToHome() {
 
     document.getElementById("mantra-about-card").style.opacity = "0";
     document.getElementById("mantra-about-card").style.transform = "translateY(5rem)";
+
+    document.getElementById("oracle-about-card").style.opacity = "0";
+    document.getElementById("oracle-about-card").style.transform = "translateY(5rem)";
 
     document.getElementById("dots").style.animation = "dots-final 2.5s ease alternate infinite both"; 
     document.getElementById("dots").style.opacity = "0";
