@@ -63,6 +63,9 @@ function exitToPatch() {
     document.getElementById("bible-card").style.opacity = "0";
     document.getElementById("bible-card").style.transform = "translateY(5rem)";
 
+    document.getElementById("oracle-card").style.opacity = "0";
+    document.getElementById("oracle-card").style.transform = "translateY(5rem)";
+
     document.getElementById("dots").style.animation = "dots-final 2.5s ease alternate infinite both"; 
     document.getElementById("dots").style.opacity = "0";
 
@@ -94,6 +97,9 @@ function exitToOtherSite(url) {
 
     document.getElementById("bible-card").style.opacity = "0";
     document.getElementById("bible-card").style.transform = "translateY(5rem)";
+
+    document.getElementById("oracle-card").style.opacity = "0";
+    document.getElementById("oracle-card").style.transform = "translateY(5rem)";
 
     setTimeout(() => {
         window.open(url, '_blank');
