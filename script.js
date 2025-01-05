@@ -39,17 +39,17 @@ setTimeout(() => {
 
     setTimeout(() => {
         bibleCard.style.opacity = 1;
-        bibleCard.style.transform = "translateX(0)";
+        bibleCard.style.transform = "translateY(0)";
     }, 100);
 
     setTimeout(() => {
         mantraCard.style.opacity = 1;
-        mantraCard.style.transform = "translateX(0)";
+        mantraCard.style.transform = "translateY(0)";
     }, 200);
 
     setTimeout(() => {
         oracleCard.style.opacity = 1;
-        oracleCard.style.transform = "translateX(0)";
+        oracleCard.style.transform = "translateY(0)";
     }, 300);
 }, 2250);
 
@@ -106,4 +106,31 @@ function togglePatchNotes() {
             oraclePatchCard.style.opacity = 0;
         }, 500);
     }
+}
+
+function exitToOtherSite(url) {
+    navbar.style.opacity = 0;
+    navbar.style.transform = "translateY(-10rem)";
+
+    patchButton.style.opacity = 0;
+    patchButton.style.transform = "translateX(-10rem)";
+
+    setTimeout(() => {
+        oracleCard.style.opacity = 0;
+        oracleCard.style.transform = "translateY(5rem)";
+    }, 100);
+
+    setTimeout(() => {
+        mantraCard.style.opacity = 0;
+        mantraCard.style.transform = "translateY(5rem)";
+    }, 200);
+
+    setTimeout(() => {
+        bibleCard.style.opacity = 0;
+        bibleCard.style.transform = "translateY(5rem)";
+    }, 300);
+
+    setTimeout(() => {
+        location.href = url;
+    }, 1000);
 }
