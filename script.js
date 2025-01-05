@@ -130,7 +130,24 @@ function exitToOtherSite(url) {
         bibleCard.style.transform = "translateY(5rem)";
     }, 300);
 
-    setTimeout(() => {
-        location.href = url;
-    }, 1000);
+    if (url.includes("https://churchof-chonk.github.io")) {
+        circle.style.opacity = 0;
+        circle.style.display = "flex";
+        circle.style.transition = "0.25s ease";
+
+        setTimeout(() => {
+            circle.style.animation = "frog-intro 0s ease";
+            circle.style.opacity = 1;
+        }, 1000);
+    
+        setTimeout(() => {
+            location.href = url;
+        }, 1500);
+    }
+
+    else {
+        setTimeout(() => {
+            location.href = url;
+        }, 1000);
+    }
 }
